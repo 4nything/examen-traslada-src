@@ -1,0 +1,19 @@
+<div fxLayout='row wrap' class='container'>
+    <div fxFlex='100'>
+        <h2>Noticias</h2>
+    </div>
+    <div fxFlex='100' class='noticias'>
+        <div *ngFor='let noticia of noticias | async' class='noticia-container' fxLayout='row wrap'>
+            <div fxFlex='90'>
+                {{noticia.titulo}}
+            </div>
+            <div fxFlex='10' class='noticia-likes'>
+                <span>{{noticia.likes}}</span>
+                <mat-icon (click)='addLike(noticia)'>thumb_up</mat-icon>
+            </div>
+            <div fxFlex='100'>
+                {{noticia.fechaPublicacion | date: 'dd-MM-yyyy'}}
+            </div>
+        </div>
+    </div>
+</div>

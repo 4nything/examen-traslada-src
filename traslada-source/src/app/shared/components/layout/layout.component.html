@@ -1,0 +1,19 @@
+<div class='vh100'>
+    <app-navbar (panelEvent)='setPanelOpened()'></app-navbar>
+    <div fxLayout='row wrap' class='h-100'>
+        <div fxFlex='15' class='h-100' [class.none]='!getStatusNav()'>
+            <mat-sidenav-container class='sidenav-container'>
+                <mat-sidenav mode='side' [(opened)]='openedPanel' class='sidenav'>
+                    <div class='bt-data' (click)='getNoticias()'>
+                        <mat-icon>download</mat-icon>
+                        <span>Obtener noticias</span>
+                    </div>
+                </mat-sidenav>
+            </mat-sidenav-container>
+        </div>
+        <div [fxFlex]='openedPanel ? 85 : 100' fxFlex.gt-sm='85' class='pr-15'>
+            <router-outlet>
+            </router-outlet>
+        </div>
+    </div>
+</div>

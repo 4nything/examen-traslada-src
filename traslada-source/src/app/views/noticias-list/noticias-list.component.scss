@@ -1,0 +1,29 @@
+.container{
+    padding: 20px;
+}
+
+.noticia-container{
+    padding: 10px 0;
+}
+
+.noticias{
+    margin-top: 20px;
+}
+
+.noticia-likes{
+    display: flex;
+    justify-content: center;
+
+    span{
+        padding: 3px 12px 0 0;
+    }
+
+    mat-icon{
+        cursor: pointer;
+
+        &:hover{
+            color: rgb(0, 101, 196);
+            transition: 0.3s;
+        }
+    }
+}
