@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiURL: 'http://api2.traslada.com.ar/test/examen/noticias'
+  apiURL: 'https://api2.traslada.com.ar/test/examen/noticias'
 };
 
 /*
